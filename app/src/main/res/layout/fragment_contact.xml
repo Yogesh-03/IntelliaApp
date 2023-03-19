@@ -8,14 +8,14 @@
     tools:context=".ContactFragment">
 
     <com.denzcoskun.imageslider.ImageSlider
-        android:id="@+id/imageSlider"
+        android:id="@+id/imageSliderContact"
         android:layout_width="0dp"
         android:layout_height="190dp"
         app:iss_auto_cycle="true"
         app:iss_corner_radius="5"
         app:iss_delay="0"
         app:iss_error_image="@android:color/darker_gray"
-        app:iss_period="2000"
+        app:iss_period="3500"
         app:iss_placeholder="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:src="@drawable/baseline_location_on_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSliderContact" />
 
     <TextView
         android:id="@+id/textView8"
@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Open map"
+        android:textSize="16sp"
         android:textColor="@color/white"
         android:textStyle="bold
 "
@@ -86,6 +87,7 @@
             app:cardCornerRadius="5dp">
 
             <ImageView
+                android:id="@+id/facebook"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/fb" />
@@ -99,6 +101,7 @@
             app:cardCornerRadius="5dp">
 
             <ImageView
+                android:id="@+id/twitter"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/twitter" />
@@ -112,6 +115,7 @@
             app:cardCornerRadius="5dp">
 
             <ImageView
+                android:id="@+id/youtube"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/yt" />
@@ -125,6 +129,7 @@
             app:cardCornerRadius="5dp">
 
             <ImageView
+                android:id="@+id/insta"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/insta" />
@@ -148,6 +153,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Call Now"
+        android:textSize="16sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,6 +200,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Email"
+        android:textSize="16sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

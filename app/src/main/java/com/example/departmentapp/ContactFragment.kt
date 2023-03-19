@@ -2,13 +2,19 @@ package com.example.departmentapp
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.Image
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
+import com.google.android.gms.dynamite.DynamiteModule.VersionPolicy.IVersions
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +42,12 @@ class ContactFragment : Fragment() {
     private  lateinit var callNow:TextView
     private lateinit var emailNow:TextView
     private lateinit var openMap:TextView
+    private lateinit var facebook:ImageView
+    private lateinit var twitter:ImageView
+    private lateinit var yt:ImageView
+    private lateinit var insta:ImageView
+    private lateinit var imageSliderContact:ImageSlider
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,6 +57,31 @@ class ContactFragment : Fragment() {
         callNow = view.findViewById(R.id.callNow)
         emailNow = view.findViewById(R.id.emailNow)
         openMap = view.findViewById(R.id.openMap)
+        facebook = view.findViewById(R.id.facebook)
+        twitter = view.findViewById(R.id.twitter)
+        yt = view.findViewById(R.id.youtube)
+        insta = view.findViewById(R.id.insta)
+        imageSliderContact = view.findViewById(R.id.imageSliderContact)
+
+        val imageList = ArrayList<SlideModel>()
+        imageList.add(SlideModel("https://img.freepik.com/free-photo/hot-line-contact-us-call-center-search-interface_53876-124009.jpg",""))
+        imageList.add(SlideModel("https://images.collegedunia.com/public/image/01c304ee7f115d0babf1affbc849009b.png?tr=w-651,h-325,c-force",""))
+        imageSliderContact.setImageList(imageList, ScaleTypes.FIT)
+        facebook.setOnClickListener {
+            goToUrl("https://www.facebook.com/IITJOfficial/")
+        }
+
+        twitter.setOnClickListener {
+            goToUrl("https://twitter.com/iitjodhpur")
+        }
+
+        yt.setOnClickListener {
+            goToUrl("https://www.youtube.com/channel/UCFfCylvEDIB1IH4GaRVRyLA")
+        }
+
+        insta.setOnClickListener {
+            goToUrl("https://www.instagram.com/insta_iitj2019/")
+        }
 
         callNow.setOnClickListener {
             val intent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "02912801553"))
@@ -63,6 +100,12 @@ class ContactFragment : Fragment() {
             startActivity(intent)
         }
         return view
+    }
+
+    private fun goToUrl(s: String) {
+        val uri:Uri = Uri.parse(s)
+        val intent:Intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
     }
 
     companion object {

@@ -98,56 +98,59 @@ class HomeFragment : Fragment() {
 
 
     private fun loadSliderImages(imageList:ArrayList<SlideModel>) {
+        //imageList.add(SlideModel("https://iitj.ac.in/department/img/materials/UG%20Pojection_MME.jpg",""))
+        imageList.add(SlideModel(R.drawable.image_one))
+        imageSlider.setImageList(imageList,ScaleTypes.FIT)
         storageReference.child("SliderImages/image_one.jpg").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
         storageReference.child("SliderImages/image_two.jpg").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
         storageReference.child("SliderImages/image_three.jpg").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
 
         storageReference.child("SliderImages/image_four.png").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
         storageReference.child("SliderImages/image_five.png").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
         storageReference.child("SliderImages/image_six.png").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
 
         storageReference.child("SliderImages/image_seven.png").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
 
         storageReference.child("SliderImages/image_eight.png").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
             imageSlider.setImageList(imageList, ScaleTypes.FIT)
         }.addOnFailureListener {
-            Toast.makeText(activity,"Failure Loading Imagae", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Failure: Firebase Quota Exceeded", Toast.LENGTH_SHORT).show()
         }
     }
 

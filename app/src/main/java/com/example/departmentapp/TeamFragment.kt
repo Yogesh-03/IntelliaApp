@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.HorizontalScrollView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.DocumentChange
@@ -70,6 +71,7 @@ class TeamFragment : Fragment() {
                     ) {
                         if (error!= null){
                             Log.e("Firestore Error", error.message.toString())
+                            Toast.makeText(activity,"Firebase Quota exceeded", Toast.LENGTH_SHORT).show()
                             return
                         }
 
