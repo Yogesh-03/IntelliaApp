@@ -100,6 +100,7 @@ class HomeFragment : Fragment() {
     private fun loadSliderImages(imageList:ArrayList<SlideModel>) {
         //imageList.add(SlideModel("https://iitj.ac.in/department/img/materials/UG%20Pojection_MME.jpg",""))
         imageList.add(SlideModel(R.drawable.image_one))
+        imageList.add(SlideModel(R.drawable.image_two))
         imageSlider.setImageList(imageList,ScaleTypes.FIT)
         storageReference.child("SliderImages/image_one.jpg").downloadUrl.addOnSuccessListener {
             imageList.add(SlideModel(it.toString(), ""))
