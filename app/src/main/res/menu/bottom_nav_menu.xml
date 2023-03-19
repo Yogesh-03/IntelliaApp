@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottomNavHome"
+        android:title="Home"
+        android:icon="@drawable/baseline_dashboard_24"/>
+    <item android:id="@+id/bottomNavTeam"
+        android:title="Team"
+        android:icon="@drawable/baseline_groups_24"/>
+    <item android:id="@+id/bottomNavEventsOrganized"
+        android:title="Events"
+        android:icon="@drawable/baseline_event_note_24"/>
+    <item android:id="@+id/bottomNavContactUs"
+        android:title="Contact"
+        android:icon="@drawable/baseline_contact_page_24"/>
+</menu>
