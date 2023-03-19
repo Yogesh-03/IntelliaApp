@@ -4,4 +4,5 @@ For Faculty Members Recycler View is used which will read data for Firebase Fire
 Images of Home Fragment Image Slider are read from Firebase Storage <br />
 Events and Activites are read from Firebase Firesotre and Storage. <br />
 Problem in loading of images of Slider and Faculty Members may happen due to Firebase Storage daily quota exceeded <br />
-https://drive.google.com/file/d/1zcsubeCIXeq_TNomMqlS8pp2O6OysvkR/view?usp=share_link
+Video Link <br />
+https://drive.google.com/file/d/1zi6ELY0CKXHDFKXrUPn1DuEDtqXTyw-1/view?usp=sharing
